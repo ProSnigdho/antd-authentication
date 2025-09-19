@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col, Card, Form, Input, Button, Space, message } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -7,7 +7,10 @@ import { auth, db } from "../../firebase/Firebase";
 import "./SignUp.css";
 
 const Signup = ({ onViewChange }) => {
+  const [loading, setLoading] = useState(false);
+
   const onFinish = async (values) => {
+    setLoading(true); // Start loading
     try {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
@@ -25,6 +28,8 @@ const Signup = ({ onViewChange }) => {
       onViewChange("login");
     } catch (error) {
       message.error(error.message);
+    } finally {
+      setLoading(false); // Stop loading, regardless of success or failure
     }
   };
 
@@ -41,6 +46,7 @@ const Signup = ({ onViewChange }) => {
               name="firstName"
               rules={[
                 { required: true, message: "Please input your first name!" },
+                { min: 2, message: "Name must be at least 2 letters" },
               ]}
             >
               <Input
@@ -53,6 +59,7 @@ const Signup = ({ onViewChange }) => {
               name="lastName"
               rules={[
                 { required: true, message: "Please input your last name!" },
+                { min: 2, message: "Name must be at least 2 letters" },
               ]}
             >
               <Input
@@ -96,6 +103,7 @@ const Signup = ({ onViewChange }) => {
                 block
                 size="large"
                 className="signup-button"
+                loading={loading} // Add this prop
               >
                 Sign Up
               </Button>

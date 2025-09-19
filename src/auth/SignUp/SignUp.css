@@ -26,3 +26,8 @@
 .signup-button {
   border-radius: 8px;
 }
+
+.ant-form-item-explain,
+.ant-form-item-extra{
+  text-align: left;
+}

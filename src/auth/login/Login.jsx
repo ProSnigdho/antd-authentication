@@ -1,5 +1,4 @@
-
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col, Card, Form, Input, Button, Space, message } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -7,12 +6,17 @@ import { auth } from "../../firebase/Firebase";
 import "./Login.css";
 
 const Login = ({ onViewChange }) => {
+  const [loading, setLoading] = useState(false);
+
   const handleLogin = async (values) => {
+    setLoading(true); // Start loading
     try {
       await signInWithEmailAndPassword(auth, values.email, values.password);
       message.success("Login successful!");
     } catch (error) {
       message.error(error.message);
+    } finally {
+      setLoading(false); // Stop loading, regardless of success or failure
     }
   };
 
@@ -60,6 +64,7 @@ const Login = ({ onViewChange }) => {
                 block
                 size="large"
                 className="login-button"
+                loading={loading} // Add this prop
               >
                 Log In
               </Button>
