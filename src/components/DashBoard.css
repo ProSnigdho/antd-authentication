@@ -1,0 +1,118 @@
+
+.dashboard-layout {
+  min-height: 100vh;
+}
+
+.dashboard-sider {
+  background: #1e1e1e !important;
+  transition: all 0.2s;
+}
+
+.dashboard-sider .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+
+.dashboard-header {
+  background: #282828;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #434343;
+}
+
+.menu-toggle-button {
+  font-size: 18px;
+  color: #f0f0f0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.dashboard-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #f0f0f0;
+  margin: 0;
+}
+
+.dashboard-logout-button {
+  border-radius: 8px;
+}
+
+.dashboard-content {
+  margin: 24px 16px;
+  padding: 24px;
+  background: #1a1a1a;
+  color: #f0f0f0;
+  min-height: 280px;
+  border-radius: 8px;
+}
+
+.welcome-container {
+  text-align: center;
+}
+
+.welcome-icon {
+  font-size: 80px;
+  color: #1a73e8;
+  margin-bottom: 24px;
+}
+
+.welcome-heading {
+  margin-bottom: 8px;
+  color: #f0f0f0;
+}
+
+.welcome-text {
+  color: #aaa;
+}
+
+.ant-menu-dark.ant-menu-inline .ant-menu-item-selected,
+.ant-menu-dark.ant-menu-inline .ant-menu-item-selected:hover {
+  background-color: #1a73e8;
+}
+
+.ant-menu-dark .ant-menu-item-selected .anticon {
+  color: #f0f0f0;
+}
+
+.ant-menu-dark .ant-menu-item-selected .ant-menu-item-icon {
+  color: #f0f0f0;
+}
+
+.ant-menu-dark .ant-menu-item:hover,
+.ant-menu-dark .ant-menu-item-active {
+  background-color: #333 !important;
+}
+
+.ant-menu-dark .ant-menu-item,
+.ant-menu-dark .ant-menu-sub {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+
+
+.sider-user-info {
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ant-layout-sider-collapsed .sider-user-info {
+  display: none;
+}
+

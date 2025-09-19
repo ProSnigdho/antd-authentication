@@ -1,0 +1,28 @@
+
+.signup-container {
+  min-height: 100vh;
+}
+
+.signup-card {
+  width: 400px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: #1e1e1e;
+  border: none;
+}
+
+.signup-title {
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+.signup-input {
+  border-radius: 8px;
+  background: #2a2a2a;
+  border: 1px solid #434343;
+}
+
+.signup-button {
+  border-radius: 8px;
+}
