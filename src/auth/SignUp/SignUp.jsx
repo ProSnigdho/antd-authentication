@@ -1,11 +1,10 @@
-
 import React from "react";
 import { Row, Col, Card, Form, Input, Button, Space, message } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "../../firebase/Firebase";
-import "./Signup.css";
+import "./SignUp.css";
 
 const Signup = ({ onViewChange }) => {
   const onFinish = async (values) => {
@@ -17,7 +16,6 @@ const Signup = ({ onViewChange }) => {
       );
       const user = userCredential.user;
 
-      
       await setDoc(doc(db, "users", user.uid), {
         firstName: values.firstName,
         lastName: values.lastName,
