@@ -19,9 +19,7 @@ const DashboardContent = () => (
   <div className="welcome-container">
     <DashboardOutlined className="welcome-icon" />
     <h1 className="welcome-heading">Welcome to your Dashboard!</h1>
-    <p className="welcome-text">
-      You have successfully logged in. This is your custom dashboard.
-    </p>
+    <p className="welcome-text">You have successfully logged in.</p>
   </div>
 );
 
