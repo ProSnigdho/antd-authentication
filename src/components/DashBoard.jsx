@@ -11,7 +11,7 @@ import {
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { auth, db } from "../firebase/Firebase";
-import "./Dashboard.css";
+import "./DashBoard.css";
 
 const { Header, Sider, Content } = Layout;
 
