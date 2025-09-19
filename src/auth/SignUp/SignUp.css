@@ -31,3 +31,13 @@
 .ant-form-item-extra{
   text-align: left;
 }
+
+.signup-card, .login-card {
+  /* The login/signup card itself should have a translucent background */
+  background-color: rgba(30, 30, 30, 0.7); /* Slightly transparent background */
+  backdrop-filter: blur(10px); /* Adds a further blur effect *inside* the card */
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* A subtle border */
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
